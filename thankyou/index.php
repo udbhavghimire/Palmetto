@@ -22,7 +22,7 @@
 
     <section id="thankyou">
         <div class="text-center pt-lg-5 pt-5 pt-0">
-            <img src="../images/logo.png" class="thankyoulogo pb-1" alt="">
+            <img src="../images/plametto-logo.png" class="thankyoulogo pb-1" alt="">
             <div class="  text-center">
                 <div class="tick">
                     <img id="tick-gif" src="../images/tick.gif" alt="">

@@ -28,7 +28,7 @@ function sendToFollowUpBoss($data)
             ),
             'tags' => array('Queensville Towns & Singles', 'Bradford')
         ),
-        'source' => 'thequeensville.ca',
+        'source' => 'palmettohomes.ca',
         'system' => 'Custom Website',
         'type' => 'Inquiry',
         'message' => $data['message']
@@ -60,19 +60,19 @@ function sendToFollowUpBoss($data)
 $mail = new PHPMailer;
 
 $mail->isSMTP();
-$mail->Host = 'mail.thequeensville.ca';
+$mail->Host = 'mail.palmettohomes.ca';
 $mail->SMTPAuth = true;
-$mail->Username = 'info@thequeensville.ca';
-$mail->Password = 'thequeensville';
+$mail->Username = 'info@palmettohomes.ca';
+$mail->Password = 'goto@palmettohomes';
 $mail->SMTPSecure = 'tls';
 $mail->Port = 587;
 
-$mail->setFrom('info@thequeensville.ca', $_POST['name']);
+$mail->setFrom('info@palmettohomes.ca', $_POST['name']);
 $mail->addAddress('contact@homebaba.ca');
 $mail->addReplyTo($_POST['email']);
 $mail->isHTML(true);
 
-$mail->Subject = "Queensville Towns & Singles - Landing Page Inquiry";
+$mail->Subject = "Plametto Towns & Singles - Landing Page Inquiry";
 
 // Prepare email message
 $message = "
@@ -81,7 +81,7 @@ $message = "
     Email: " . strip_tags($_POST['email']) . "<br/>
     Realtor or working with one?: " . strip_tags($_POST['realtor']) . "<br/>
     Message: " . strip_tags($_POST['message']) . "<br/>
-    Source: thequeensville.ca
+    Source: palmettohomes.ca
 ";
 
 $mail->Body = $message;
