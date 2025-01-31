@@ -60,14 +60,14 @@ function sendToFollowUpBoss($data)
 $mail = new PHPMailer;
 
 $mail->isSMTP();
-$mail->Host = 'mail.palmettohomes.ca';
+$mail->Host = 'mail.plamettohomes.ca';
 $mail->SMTPAuth = true;
-$mail->Username = 'info@palmettohomes.ca';
+$mail->Username = 'info@plamettohomes.ca';
 $mail->Password = 'goto@palmettohomes';
 $mail->SMTPSecure = 'tls';
 $mail->Port = 587;
 
-$mail->setFrom('info@palmettohomes.ca', $_POST['name']);
+$mail->setFrom('info@plamettohomes.ca', $_POST['name']);
 $mail->addAddress('contact@homebaba.ca');
 $mail->addReplyTo($_POST['email']);
 $mail->isHTML(true);
@@ -81,7 +81,7 @@ $message = "
     Email: " . strip_tags($_POST['email']) . "<br/>
     Realtor or working with one?: " . strip_tags($_POST['realtor']) . "<br/>
     Message: " . strip_tags($_POST['message']) . "<br/>
-    Source: palmettohomes.ca
+    Source: plamettohomes.ca
 ";
 
 $mail->Body = $message;
